@@ -24,7 +24,7 @@ namespace kiln {
 
 					if (i.is_regular_file()) {
 						FrontendFile file(i.path());
-
+						 
 					}
 					else {
 						std::cout << "??    " << filenameStr << '\n';
