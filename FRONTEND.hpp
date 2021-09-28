@@ -19,7 +19,7 @@ namespace kiln {
 
 	private:
 		bool parse() {
-			std::cout << "Rendering files..." << std::endl;
+			/*std::cout << "Rendering files..." << std::endl;*/
 			bool results = false;
 
 			std::vector<std::string> lines;
