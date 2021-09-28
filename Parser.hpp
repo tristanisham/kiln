@@ -27,7 +27,7 @@ namespace kiln {
 						 
 					}
 					else {
-						std::cout << "??    " << filenameStr << '\n';
+						std::cout << "Invalid File: " << filenameStr << '\n';
 
 					}
 				}
