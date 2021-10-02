@@ -14,7 +14,8 @@ namespace kiln
 		{
 
 			std::vector<std::string> paths = {
-				"/src/backend",
+				"/public/",
+				/*"/src/backend",*/
 				"/src/data",
 				"/src/frontend"};
 

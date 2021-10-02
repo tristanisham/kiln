@@ -150,6 +150,7 @@
     <ClInclude Include="FRONTEND.hpp" />
     <ClInclude Include="inja.hpp" />
     <ClInclude Include="json.hpp" />
+    <ClInclude Include="Operators.hpp" />
     <ClInclude Include="Parser.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

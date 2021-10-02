@@ -35,5 +35,8 @@
     <ClInclude Include="FRONTEND.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Operators.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

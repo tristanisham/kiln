@@ -3,7 +3,7 @@
 #include <string>
 #include <filesystem>
 #include <fstream>
-
+#include "Operators.hpp"
 
 
 namespace kiln {
@@ -17,12 +17,15 @@ namespace kiln {
 			this->parse();
 		}
 
+		
+		
+
 	private:
 		bool parse() {
-			/*std::cout << "Rendering files..." << std::endl;*/
+			std::cout << "Rendering files..." << std::endl;
 			bool results = false;
 
-			std::vector<std::string> lines;
+			//std::vector<std::string> lines;
 			
 			std::ifstream file(this->target_file);
 
@@ -31,16 +34,25 @@ namespace kiln {
 				// Not sure where this library is... 
 				// This is how I parse each line of each file.
 				while (getline(file, line)) {
-					std::cout << line << std::endl;
-					lines.push_back(line);
-
+					//std::cout << line << std::endl;
+					/*lines.push_back(line);*/
+					auto words = kiln::Operators::tokenize(line, ' ');
+					for (auto word : words) {
+						
+					}
 				}
+
+
+				
+				file.close();
 			}
 			else {
-				std::cout << "Failed loading files" << std::endl;
+				std::cerr << "Failed loading files" << std::endl;
 			}
 
 			return results;
 		}
+
+		
 	};
 }
