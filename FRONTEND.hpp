@@ -25,7 +25,7 @@ namespace kiln {
 			std::cout << "Rendering files..." << std::endl;
 			bool results = false;
 
-			//std::vector<std::string> lines;
+			
 			
 			std::ifstream file(this->target_file);
 
@@ -34,12 +34,13 @@ namespace kiln {
 				// Not sure where this library is... 
 				// This is how I parse each line of each file.
 				while (getline(file, line)) {
-					//std::cout << line << std::endl;
-					/*lines.push_back(line);*/
+					std::vector<std::string> statement;
 					auto words = kiln::Operators::tokenize(line, ' ');
 					for (auto word : words) {
+						std::cout << word << std::endl;
 						
 					}
+			
 				}
 
 
