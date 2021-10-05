@@ -146,13 +146,12 @@
     <ClCompile Include="kiln.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CLI_COMMANDS.hpp" />
-    <ClInclude Include="FRONTEND.hpp" />
-    <ClInclude Include="inja.hpp" />
-    <ClInclude Include="json.hpp" />
-    <ClInclude Include="Line.hpp" />
-    <ClInclude Include="Operators.hpp" />
-    <ClInclude Include="Parser.hpp" />
+    <ClInclude Include="datatypes\Line.hpp" />
+    <ClInclude Include="src\clayfiles\clayfile_tags.hpp" />
+    <ClInclude Include="src\clayfiles\data_selection.hpp" />
+    <ClInclude Include="src\clayfiles\html5.hpp" />
+    <ClInclude Include="src\CLI_COMMANDS.hpp" />
+    <ClInclude Include="src\Operators.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

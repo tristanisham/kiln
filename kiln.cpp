@@ -1,12 +1,12 @@
 #include <iostream>
 #include <string>
 // Program Files
-#include "CLI_COMMANDS.hpp"
-#include "Parser.hpp"
+#include "src/CLI_COMMANDS.hpp"
+#include "src/Parser.hpp"
 
 int main(int argc, char *argv[])
 {
-    std::cout << "Kiln v0.0.60 --debug" << std::endl;
+    std::cout << "Kiln v0.0.100 --debug" << std::endl;
     if (argc > 1)
     {
         std::string command = argv[1];

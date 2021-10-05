@@ -4,7 +4,8 @@
 #include <filesystem>
 #include <fstream>
 #include "Operators.hpp"
-#include "Line.hpp"
+#include "./datatypes/Line.hpp"
+#include "clayfiles/html5.hpp"
 
 namespace kiln {
 
@@ -22,7 +23,7 @@ namespace kiln {
 
 	private:
 		bool parse() {
-			std::cout << "Rendering files..." << std::endl;
+			/*std::cout << "Rendering files..." << std::endl;*/
 			bool results = false;
 
 			
@@ -31,7 +32,6 @@ namespace kiln {
 
 			if (file.is_open()) {
 				std::string line;
-				// Not sure where this library is... 
 				// This is how I parse each line of each file.
 				std::vector<Line> document;
 				int line_num = 1;
@@ -50,10 +50,24 @@ namespace kiln {
 					line_num++;
 				}
 
-				for (auto s : document) {
-					std::cout << s.num << " | " << s.len << " | " << std::endl;
+				auto first_line = kiln::Operators::tokenize(document[0].body, ' ');
+				// Determines if required #pragma definition is found.
+				if (first_line[0] == "#pragma") {
+					// Determines what kind of files kiln will bake.
+					if (first_line[1] == "html5") {
+						kiln::HTML5 html5(document);
+						html5.parse();
+					}
+					else {
+						std::cerr << "Unsupported Pragma. | " << this->target_file << " Line: 1" << std::endl;
+						exit(201);
+					}
 				}
-				
+				else {
+					std::cerr << "No Pragma Found. | " << this->target_file << " Line: 1" << std::endl;
+					exit(202);
+				}
+
 				file.close();
 			}
 			else {

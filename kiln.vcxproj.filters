@@ -20,25 +20,22 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="json.hpp">
+    <ClInclude Include="datatypes\Line.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="inja.hpp">
+    <ClInclude Include="src\CLI_COMMANDS.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="CLI_COMMANDS.hpp">
+    <ClInclude Include="src\Operators.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Parser.hpp">
+    <ClInclude Include="src\clayfiles\html5.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="FRONTEND.hpp">
+    <ClInclude Include="src\clayfiles\clayfile_tags.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Operators.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Line.hpp">
+    <ClInclude Include="src\clayfiles\data_selection.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
