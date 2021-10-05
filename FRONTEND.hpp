@@ -4,7 +4,7 @@
 #include <filesystem>
 #include <fstream>
 #include "Operators.hpp"
-
+#include "Line.hpp"
 
 namespace kiln {
 
@@ -33,17 +33,26 @@ namespace kiln {
 				std::string line;
 				// Not sure where this library is... 
 				// This is how I parse each line of each file.
+				std::vector<Line> document;
+				int line_num = 1;
 				while (getline(file, line)) {
-					std::vector<std::string> statement;
-					auto words = kiln::Operators::tokenize(line, ' ');
-					for (auto word : words) {
-						std::cout << word << std::endl;
-						
-					}
-			
+					int lnum = 0;
+					do {
+						lnum++;
+					} while (lnum < line.length());
+
+					kiln::Line newline = {
+						line_num,
+						lnum,
+						line
+					};
+					document.push_back(newline);
+					line_num++;
 				}
 
-
+				for (auto s : document) {
+					std::cout << s.num << " | " << s.len << " | " << std::endl;
+				}
 				
 				file.close();
 			}

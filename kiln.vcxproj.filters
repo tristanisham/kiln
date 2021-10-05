@@ -38,5 +38,8 @@
     <ClInclude Include="Operators.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Line.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
