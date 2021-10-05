@@ -6,7 +6,7 @@
 
 int main(int argc, char *argv[])
 {
-    std::cout << "Kiln v0.0.150 --debug" << std::endl;
+    std::cout << "Kiln v0.0.200 --debug" << std::endl;
     if (argc > 1)
     {
         std::string command = argv[1];

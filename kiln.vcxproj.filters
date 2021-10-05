@@ -32,9 +32,6 @@
     <ClInclude Include="src\clayfiles\html5.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\clayfiles\clayfile_tags.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="src\clayfiles\data_selection.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>

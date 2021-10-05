@@ -147,7 +147,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="datatypes\Line.hpp" />
-    <ClInclude Include="src\clayfiles\clayfile_tags.hpp" />
     <ClInclude Include="src\clayfiles\data_selection.hpp" />
     <ClInclude Include="src\clayfiles\html5.hpp" />
     <ClInclude Include="src\CLI_COMMANDS.hpp" />
